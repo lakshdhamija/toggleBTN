@@ -1,0 +1,48 @@
+/*Main label*/
+.main {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 35px;
+  top: 50vh;
+  left: 50vw;
+}
+
+/*Hiding checkbox*/
+.main input{
+  display:none;
+}
+
+/*Button*/
+.btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: gray;
+  border-radius: 35px;
+}
+
+/*Internal round bullet*/
+.btn:before {
+  position: absolute;
+  content: '';
+  height: 27px;
+  width: 27px;
+  left:5px;
+  top:4px;
+  background-color: white;
+  transition: .5s;
+  border-radius: 50%;
+}
+
+/*color change*/
+input:checked + .btn {
+  background-color: #32CD32;
+}
+
+/*Shift Position*/
+input:checked + .btn:before {
+  transform: translateX(23px);
+}
